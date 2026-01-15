@@ -27,7 +27,12 @@ Yellow.addEventListener('click',()=>{
 
 greet.addEventListener('click',()=>{
     let username = document.getElementById('username').value;
-    document.getElementById('heading').innerText = "Hello, "+ username;
+    if(username.length != 0){
+        document.getElementById('name').innerText = ", " + username;
+    }
+    else{
+        document.getElementById('name').innerText = ""; 
+    }
 })
 
 
