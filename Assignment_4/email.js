@@ -88,7 +88,7 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
     statusMsg.style.color = "green";
 
     document.getElementById("bookingForm").reset();
-    cartBody.innerHTML = "";
+    // cartBody.innerHTML = "";
     // document.getElementsByClassName("table").reset();
     submitBtn.disabled = true;
 

@@ -352,8 +352,8 @@ gap: 10px;
 }
 
 .amount{
-    flex: 1;
-    overflow: hidden;
+    /* flex: 1; */
+    /* overflow: hidden; */
     background-color: #ffffff;
     height: 100%;
     border-radius: 20px;
