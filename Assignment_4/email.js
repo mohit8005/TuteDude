@@ -88,15 +88,16 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
     statusMsg.style.color = "green";
 
     document.getElementById("bookingForm").reset();
-    document.getElementsByClassName("table").reset();
+    cartBody.innerHTML = "";
+    // document.getElementsByClassName("table").reset();
     submitBtn.disabled = true;
 
   })
-//   .catch(() => {
-//     statusMsg.innerText = "ⓘ Failed to send email. Try again.";
-//     statusMsg.style.color = "#e77b95";
-//   });
-  .catch(err => {
-  console.log(err);
-});
+  .catch(() => {
+    statusMsg.innerText = "ⓘ Failed to send email. Try again.";
+    statusMsg.style.color = "#e77b95";
+  });
+//   .catch(err => {
+//   console.log(err);
+// });
 });
