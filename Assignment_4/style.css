@@ -78,6 +78,8 @@ html{
 
 .main{
     display: grid;
+    /* justify-content: center; */
+    /* flex-direction: column; */
     grid-template-columns: 1fr 1fr;
     align-items: center;
     height: 100%;
@@ -110,14 +112,13 @@ html{
 
 
 .image{
-   
     height: 150%;
     width: 100%;
     background-image: url("https://png.pngtree.com/png-clipart/20231016/original/pngtree-washing-machine-illustration-png-image_13323676.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    justify-self: center;
+    /* justify-self: center; */
 }
 
 .button a{
@@ -138,7 +139,7 @@ html{
 .achievements{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 100%;
     justify-content: space-between;
     margin-top: 5rem;
@@ -316,12 +317,6 @@ html{
 }
 
 
-
-
-
-
-
-
 .add{
      font-size: 1rem;
      padding: 0.5rem 3rem;
@@ -347,8 +342,6 @@ html{
     padding: 1.5rem 0;
     /* background-color: red; */
 }
-
-
 
 .card2{
 /* height: 80vh;              🔥 FORCE SAME AS LEFT CARD */
@@ -432,7 +425,7 @@ td{
     background-color: #ffffff;
     border-radius: 20px;
     border: 1px solid rgb(217, 220, 225);
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem;
     height: 100%;
 }
 
@@ -550,7 +543,23 @@ label{
     }
     .username{
         margin-right: 0;
-        padding: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .main{
+        grid-template-columns: 1fr;
+        margin-top: 0px;
+        
+    }
+
+    .content{
+        order: 2;
+    }
+
+    .image{
+        height: 100px;
+        order: 1;
+    
     }
 
     .heading h1{
@@ -566,10 +575,154 @@ label{
         line-height: normal;
     }
 
-    button{
+    .button1{
         padding: 0.5rem;
+        font-size: 0.5rem;
+        /* width: 100%; */
+    }
+
+    .achievements{
+        margin-top: 1rem;
+        padding: 0 1rem;
+        flex-direction: column;
+        height: 20%;
+
+    }
+    
+    .achievements h2{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .achievements .number{
+        font-size: 0.9rem;
+    }
+
+    .achievements .text{
+        font-size: 0.5rem;
+    }
+
+    .right .boxes{
+        /* color: red; */
+        height: 10vh;
+        font-size: 0.5rem;
+        height: 70%;
+    }
+
+    .right .boxes:nth-child(n + 1):nth-child(-n + 3){
+        padding: 0.5rem 0.5rem;
+    }
+
+    .services{
+        grid-template-columns: 1fr;
+    }
+
+    .card1{
+        padding: 1rem;
+    }
+
+    .card1 h2{
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card1 p{
+        font-size: 0.7rem;
+        margin-top: 0.6rem;
+    }
+
+    .middle{
+        padding: 1rem 0;
+    }
+
+    .service-items{
+        font-size: 0.7rem;
+        padding: 0.5rem 0;
+    }
+
+    .add,.remove{
+        padding: 0.2rem 0.4rem;
+        font-size: 0.3rem;
+    }
+
+    .bottom{
+        padding: 0.5rem;
+    }
+    
+    .amount .header{
+        padding: 1rem;
+    }
+
+    .header h4,.total h4,.book h4{
+        font-size: 1rem;
+    }
+
+    .table{
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-align: start;
+        padding: 1rem 0.4rem;
+    }
+
+    #box2,#box3{
+        padding-left: 1rem;
+    }
+
+    th,td{
+        font-size: 0.7rem;
+        text-align: start;
+        padding: 0.5rem;
+    }
+
+    .amount{
+        padding: 0;
+    }
+
+    .total{
+        padding: 1rem 0.5rem;
+    }
+
+    .empty-cart{
+        padding: 2rem;
+    }
+
+    .empty-cart p:nth-child(1){
+        font-size: 2rem;
+
+    }
+
+
+    .empty-cart p:nth-child(2){
+        font-size: 1rem;
+    }
+    .empty-cart p:nth-child(3){
         font-size: 0.7rem;
     }
     
+
+    .total p{
+        margin-right: 1rem;
+        font-size: 0.9rem;
+    }
+
+    #name,#email,#phone{
+        height: 2rem;
+        font-size: 0.7rem;
+    }
+    label{
+        font-size: 0.8rem;
+    }
+    .submit{
+        height: 2.5rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    
+    
+
+
 }
 
