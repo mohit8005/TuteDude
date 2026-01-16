@@ -346,13 +346,13 @@ html{
 
 .card2{
 display: grid;
-grid-template-rows: 50% 48%;
+grid-template-rows: 1fr 48%;
 gap: 10px;
 }
 
 .amount{
     background-color: #ffffff;
-    /* height: 50%; */
+    height: 100%;
     border-radius: 20px;
     border: 1px solid rgb(217, 220, 225);
 }
@@ -368,8 +368,10 @@ gap: 10px;
 }
 
 .add-rows{
-    height: 43.55%;
+    height: 145px;
     overflow: auto;
+    /* background-color: red; */
+
 }
 
 table{
@@ -404,6 +406,8 @@ td{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* height: 10%; */
+    /* background-color: green; */
     padding: 1.5rem 2rem;
     border-top: 1px solid slategrey;
 }
@@ -420,6 +424,7 @@ td{
     border-radius: 20px;
     border: 1px solid rgb(217, 220, 225);
     padding: 1.5rem 1.5rem;
+    height: 100%;
 }
 
 .name{

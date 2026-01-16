@@ -57,9 +57,9 @@ window.addEventListener("cart-change", () => {
 
 // form reset
 
-function cartReset(){
-    
-}
+// function cartReset(){
+
+// }
 
 
 
