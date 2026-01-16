@@ -210,7 +210,7 @@ html{
     border-radius: 20px;
     padding: 2rem;
     background-color: #ffffff;
-    height: 80vh;
+    /* height: 80vh; */
     width: 100%;
     grid-column: span;
     overflow: hidden;
@@ -345,13 +345,13 @@ html{
 
 .bottom{
     padding: 1.5rem 0;
-    background-color: red;
+    /* background-color: red; */
 }
 
 
 
 .card2{
-height: 80vh;              /* 🔥 FORCE SAME AS LEFT CARD */
+/* height: 80vh;              🔥 FORCE SAME AS LEFT CARD */
     display: flex;
     flex-direction: column;
     gap: 10px;
