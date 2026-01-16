@@ -1,89 +1,78 @@
-
 const emptyCart = document.querySelector(".empty-cart");
-const cartBody = document.getElementById("cart-body");
+var cartBody = document.getElementById("cart-body");
 const totalEle = document.getElementById("total");
-const cartContent =  document.querySelector(".add-rows");
+const cartContent = document.querySelector(".add-rows");
 
 let total = 0;
 
-function showCart(){
-     emptyCart.classList.add("hidden");
-     cartContent.classList.remove("hidden")
+// 🔔 CART CHANGE EVENT
+function notifyCartChange() {
+  window.dispatchEvent(new Event("cart-change"));
 }
 
-function showEmptyCart(){
-    cartContent.classList.add("hidden")
-     emptyCart.classList.remove("hidden");
+function showCart() {
+  emptyCart.classList.add("hidden");
+  cartContent.classList.remove("hidden");
+}
+
+function showEmptyCart() {
+  cartContent.classList.add("hidden");
+  emptyCart.classList.remove("hidden");
 }
 
 document.querySelectorAll(".toggle-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
 
-    btn.addEventListener("click",function(){
+    const service = this.closest(".service-items");
+    const id = service.dataset.id;
+    const name = service.dataset.name;
+    const price = Number(service.dataset.price);
 
-        
-       
-        
+    // ➕ ADD ITEM
+    if (this.classList.contains("add")) {
 
-        const service = this.closest(".service-items");
+      cartBody.innerHTML += `
+        <tr data-id="${id}">
+          <td>${cartBody.children.length + 1}</td>
+          <td>${name}</td>
+          <td>₹ ${price}</td>
+        </tr>
+      `;
 
-        const id = service.dataset.id;
-        const name = service.dataset.name;
-        const price = Number(service.dataset.price);
+      showCart();
 
+      total += price;
+      totalEle.innerText = total;
 
-        // agr add state mei hai toh
+      this.innerText = "Remove Item ⊝";
+      this.classList.remove("add");
+      this.classList.add("remove");
 
-        if(this.classList.contains("add")){
+      notifyCartChange(); // 🔥 IMPORTANT
+    }
 
-            // table me row add
-         let newClass =  document.getElementsByClassName("add-Table");
-            // emptyCart.style.display = "none";
+    // ➖ REMOVE ITEM
+    else {
+      const row = cartBody.querySelector(`tr[data-id="${id}"]`);
+      if (row) row.remove();
 
-            cartBody.innerHTML +=` <tr data-id="${id}">
-                <td>${cartBody.children.length + 1}</td>
-                <td>${name}</td>
-                <td>₹ ${price}</td>
-            </tr>
-            `;
+      total -= price;
+      totalEle.innerText = total;
 
-            showCart();
+      this.innerText = "Add Item ⊕";
+      this.classList.remove("remove");
+      this.classList.add("add");
 
-            //total update
+      // serial re-order
+      [...cartBody.children].forEach((tr, i) => {
+        tr.children[0].innerText = i + 1;
+      });
 
-            total += price;
-            totalEle.innerText = total;
+      if (cartBody.children.length === 0) {
+        showEmptyCart();
+      }
 
-            this.innerText = "Remove Item ⊝";
-            this.classList.remove("add");
-            this.classList.add("remove");
-        }
-        else{
-
-            const row = cartBody.querySelector(`tr[data-id="${id}"]`);
-
-            if(row) row.remove();
-
-            total -= price;
-            totalEle.innerText = total;
-
-            this.innerText = "Add Item ⊕";
-            this.classList.remove("remove");
-            this.classList.add("add");
-
-            [...cartBody.children].forEach((tr,i) => {
-                tr.children[0].innerText = i + 1;
-            });
-
-            if(cartBody.children.length == 0){
-               showEmptyCart();
-            }
-
-        }
-
-    })
-})
-
-
-
-
-
+      notifyCartChange(); // 🔥 IMPORTANT
+    }
+  });
+});

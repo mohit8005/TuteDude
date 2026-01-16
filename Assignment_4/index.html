@@ -45,7 +45,7 @@
                             rediscover the freshness of your clothes today!</p>
                     </div>
                     <div class="button">
-                        <button class="button1">Book a Service Today!</button>
+                       <a href="#service"><div class="button1">Book a Service Today!</div></a> 
                     </div>
                 </div>
             </section>
@@ -77,7 +77,7 @@
         </div>
     </section>
 
-    <div class="services-outer" id="#service">
+    <div class="services-outer" id="service">
         <div class="services">
             <section class="card1">
                 <div class="header">
@@ -172,7 +172,7 @@
                 <div class="book">
                     <h4>Book now</h4>
  
-                    <form action="">
+                    <form action="#" method="POST" id="bookingForm">
                         <div class="name">
                             <label for="name">Full Name</label> <br/>
                         <input type="text" name="name" id="name" placeholder="Joen Doe"><br/>
@@ -190,10 +190,11 @@
                             </div>
                         </div>
 
-                        <input type="submit" value="Book now" class="submit">
+                        <button type="submit" id="submitBtn" class="submit" disabled>Book now</button>
                         
                     </form>
 
+                    <p class="alert-msg" id="statusMsg"></p>
 
                 </div>
             </section>
@@ -201,7 +202,40 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+<script src="script.js"></script>
+    <script src="email.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
 </body>
 
 </html>

@@ -13,6 +13,10 @@
     --var-secondary-bacg-color: #5662f9;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .container{
     display: flex;
     justify-content: space-between;
@@ -116,6 +120,10 @@
     justify-self: center;
 }
 
+.button a{
+      text-decoration: none;
+}
+
 .button1{
     background-color: #30b4ff;
     padding: 1rem 1.5rem;
@@ -130,6 +138,7 @@
 .achievements{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     margin-top: 5rem;
@@ -163,7 +172,7 @@
 }
 
 .right .boxes{
-    width: 15vw;
+    
     height: 100%;
     
 }
@@ -254,6 +263,7 @@
     font-size: 1rem;
     font-weight: 600;
     background-color: #f8f8f8;
+    
     border-bottom: 1px solid slategrey;
     
 }
@@ -358,7 +368,7 @@ gap: 10px;
 }
 
 .add-rows{
-    height: 45%;
+    height: 43.55%;
     overflow: auto;
 }
 
@@ -417,7 +427,7 @@ td{
 }
 #name,#email,#phone{
     width: 100%;
-    height: 3.3rem;
+    height: 3rem;
     border-radius: 10px;
     border: 1px solid rgb(217, 220, 225);
     /* background-color: hsl(0, 0%, 97%); */
@@ -433,15 +443,27 @@ label{
 
 .submit{
     width: 100%;
-    height: 3.3rem;
+    height: 3rem;
     border-radius: 10px;
     border: 1px solid rgb(217, 220, 225);
     background-color: var(--var-secondary-bacg-color);
     /* font-size: 1.2rem; */
-    padding-left: 0.5rem;
-    margin: 1rem auto;
+    /* padding-left: 0.5rem; */
+    /* margin: 0.5==rem auto; */
     color: white;
     font-weight: 700;
+}
+
+#submitBtn:disabled{
+  /* background-color: #ccc; */
+  /* color: #666; */
+  cursor: not-allowed;        /* 🚫 red circle type cursor */
+  opacity: 0.6;
+}
+
+#submitBtn{
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 .contact{
@@ -451,6 +473,15 @@ label{
     justify-content: space-between;
     align-items: center;
 }
+
+.alert-msg{
+    padding: 1rem;
+    font-size: 0.8rem;
+
+}
+
+
+
 @media (max-width : 768px){
     .navbar ul{
         display: none;
