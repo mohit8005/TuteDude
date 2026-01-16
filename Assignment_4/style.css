@@ -369,7 +369,8 @@ gap: 10px;
 
 .add-rows{
     height: 17vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     /* background-color: red; */
 
 }
