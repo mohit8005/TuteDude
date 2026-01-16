@@ -190,6 +190,7 @@ html{
 .services-outer{
     background-color: #f6f8fa;
     display: flex;
+    
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -279,7 +280,8 @@ html{
     justify-content: center;
     text-align: center;
     align-items: center;
-    height: 45%;
+    /* height: auto; */
+    flex: 1;
     
 }
 
@@ -346,18 +348,20 @@ html{
 
 
 .card2{
-display: flex;
-flex-direction: column;
-gap: 10px;
+height: 80vh;              /* 🔥 FORCE SAME AS LEFT CARD */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .amount{
-    /* flex: 1; */
-    /* overflow: hidden; */
-    background-color: #ffffff;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     border-radius: 20px;
     border: 1px solid rgb(217, 220, 225);
+    background-color: #ffffff;
 }
 .amount .header{
     display: flex;
@@ -371,11 +375,9 @@ gap: 10px;
 }
 
 .add-rows{
-    height: 17svh;
+   flex: 1;                   /* 🔥 vh ❌ */
     overflow-y: auto;
     overflow-x: hidden;
-    /* background-color: red; */
-
 }
 
 table{
