@@ -213,6 +213,7 @@ html{
     height: 80vh;
     width: 100%;
     grid-column: span;
+    overflow: hidden;
 }
 
 .card1 h2{
@@ -236,6 +237,7 @@ html{
 .middle{
     padding: 2rem 0rem;
      border-bottom: 1px solid var(--var-color);
+     /* background-color: red; */
 }
 
 .service-items{
@@ -343,6 +345,7 @@ html{
 
 .bottom{
     padding: 1.5rem 0;
+    background-color: red;
 }
 
 
