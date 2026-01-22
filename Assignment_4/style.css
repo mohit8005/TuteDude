@@ -22,6 +22,7 @@ html{
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
+    position: sticky;
     /* background-color: red; */
 }
 
@@ -487,6 +488,132 @@ label{
 
 }
 
+
+.quality{
+    /* height: 20vh; */
+    /* width: 100%; */
+    display: flex;
+    margin: 0 8rem 0 8rem;
+    gap: 10px;
+    padding: 2rem;
+
+}
+
+.quality-boxes{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icons{
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 1rem;
+    /* color: var(--var-secondary-color); */
+    
+}
+
+.description{
+    text-align: center;
+    padding: 1rem;
+    color: var(--var-secondary-color);
+}
+
+.subscription{
+    display: flex;
+    background-color: #3ea9fa;
+    color: white;
+    /* justify-content: center; */
+    align-items: center;
+    
+    padding: 2rem;
+    gap: 10px;
+}
+
+.headers{
+    font-size: 3rem;
+    padding-right: 1rem;
+    width: 30%;
+    /* background-color: red;/\ */
+    text-align: justify;
+    margin-left: 8.5rem;
+    /* padding-left: rem; */
+}
+
+
+
+.subs-input, .subs-submit{
+    width: 25vw;
+    padding: 0.8rem;
+    background-color: #4bb5f9;
+    border: 1px solid #54bcfd;
+    outline: #30b4ff;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.subscription input::placeholder{
+    color: white;
+}
+
+.subs-submit{
+    margin-top: 10px;
+    background-color: white;
+    color: #4bb5f9;
+    
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f6f8fa;
+    padding: 2rem 5rem;
+    /* align-items: center; */
+}
+
+.footer-head{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.about p:nth-child(1){
+    font-size: 1.5rem;
+}
+
+.about p:nth-child(2){
+    text-transform: capitalize;
+}
+
+.footer a,.about p:nth-child(2), .cont li{
+    color: var(--var-color);
+    font-size: 1.3rem;
+}
+
+#home{
+    color: black;
+}
+
+.footer a{
+    text-decoration: none;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.social li{
+    display: inline;
+    /* color: black; */
+}
+.social a{
+    color: rgb(55, 53, 53);
+}
 
 
 @media (max-width : 768px){
