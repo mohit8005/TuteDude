@@ -534,13 +534,14 @@ label{
 }
 
 .headers{
-    font-size: 3rem;
     padding-right: 1rem;
     width: 30%;
-    /* background-color: red;/\ */
-    /* text-align: justify; */
     margin-left: 8.5rem;
-    /* padding-left: rem; */
+}
+
+.headers h3{
+    font-size: 3rem;
+    margin: 0;
 }
 
 
