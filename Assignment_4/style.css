@@ -909,15 +909,13 @@ label{
         flex-direction: column;
     }
 
-    form{
+    .subscription form{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 80%;
         padding-left: 2rem;
-    
-
     }
 
     .subs-input, .subs-submit{
