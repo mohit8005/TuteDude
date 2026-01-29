@@ -11,7 +11,10 @@
     --var-main-color:#68caff;
     --var-secondary-color: #49545d;
     --var-secondary-bacg-color: #5662f9;
+    --var-font-size: 2rem;
 }
+
+
 
 html{
     scroll-behavior: smooth;
@@ -583,6 +586,7 @@ label{
     margin-bottom: 1rem;
 }
 
+
 .about p:nth-child(1){
     font-size: 1.5rem;
 }
@@ -598,6 +602,7 @@ label{
 
 #home{
     color: black;
+    font-size: 3rem;
 }
 
 .footer a{
@@ -718,7 +723,7 @@ label{
     }
     
     .achievements h2{
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding: 1rem;
     }
 
@@ -743,6 +748,11 @@ label{
 
     .services{
         grid-template-columns: 1fr;
+    }
+
+    .services-outer{
+           /* justify-content: space-between; */
+           width: 100vw;
     }
 
     .card1{
@@ -848,8 +858,124 @@ label{
         font-size: 1rem;
     }
 
+    .quality{
+        margin: 0rem;
+        gap: 10px;
+        padding: 2rem 2.5rem;
+        flex-direction: column;
+        gap: 0;
+    }
+    .quality-boxes img{
+           height: 80px;
+           width: 80px;
+           margin-top: 10px;
+           
+    }
+
+    .icons{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .quality-boxes video{
+        height: 80px;
+        /* margin-top: -2rem; */
+    }
+
+    .description{
+        font-size: 15px;
+        padding: 0 1rem;
+    }
+
+    .subscription{
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .subscription .headers{
+       padding-right: 0rem;
+       width: 100%;
+       margin-left: 0rem;
+    }
+
+    .headers h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .inputs{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        padding-left: 2rem;
     
+
+    }
+
+    .subs-input, .subs-submit{
+    width: 80%;
+    padding: 0.8rem;
+    font-size: 1.3rem;
+    }
+
+    .subs-input{
+        margin-top: 10px;
+    }
+
+    .subs-submit{
+        margin-top: 0px;
+    }
+    .footer{
+        flex-direction: column;
+        padding: 32px 60px;
+    }
+    .footer-head a{
+        font-size: 1rem;
+    }
+
+    .footer-head{
+        margin-bottom: 5px;
+    }
+
+
+    .des{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #home{
+        font-size: 1.5rem;
+    }
+    .about p:nth-child(1){
+    font-size: 1rem;
+    text-align: end;
+    }
+
+    .about p:nth-child(2){
+        font-size: 1rem;
+    }
+
+    .footer a,.about p:nth-child(2), .cont li{
+    font-size: 1rem;
+    }
+
+    .imp-links{
+        margin: 10px 0;
+    }
+
     
+
+    .imp-links a{
+        font-size: 0.8rem;
+    }
 
 
 }

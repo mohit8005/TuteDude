@@ -20,6 +20,30 @@ function showEmptyCart() {
   emptyCart.classList.remove("hidden");
 }
 
+function clearFullCart() {
+
+  cartBody.innerHTML = "";
+  total = 0;
+  totalEle.innerText = total;
+
+  showEmptyCart();
+
+  document.querySelectorAll(".service-items").forEach(
+    service => {
+
+      const btn = service.querySelector(".toggle-btn");
+      
+      if(btn){
+        btn.innerText = "Add Item ⊕";
+      btn.classList.remove("remove");
+      btn.classList.add("add");
+      }
+    });
+
+    notifyCartChange();
+
+}
+
 document.querySelectorAll(".toggle-btn").forEach(btn => {
   btn.addEventListener("click", function () {
 
@@ -76,3 +100,5 @@ document.querySelectorAll(".toggle-btn").forEach(btn => {
     }
   });
 });
+
+window.clearFullCart = clearFullCart;

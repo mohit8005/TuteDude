@@ -11,6 +11,11 @@ const emailInput = document.getElementById("email");
 const phoneInput = document.getElementById("phone");
 const submitBtn = document.getElementById("submitBtn");
 const statusMsg = document.getElementById("statusMsg");
+const totalElem = document.getElementById("total");
+
+function getTotalPrice(){
+  return totalElem.innerText;
+}
 
 
 function getCartItemsText(){
@@ -81,7 +86,8 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
     name: nameInput.value,
     email: emailInput.value,
     phone: phoneInput.value,
-    bookedItems : itemsBooked
+    bookedItems : itemsBooked,
+    totalPrice : getTotalPrice()
   })
   .then(() => {
     statusMsg.innerText = "ⓘ Email has been sent successfully";
@@ -91,6 +97,7 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
     // cartBody.innerHTML = "";
     // document.getElementsByClassName("table").reset();
     submitBtn.disabled = true;
+    clearFullCart();
 
   })
   .catch(() => {
