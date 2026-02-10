@@ -1,16 +1,22 @@
-# React + Vite
+In this project, I created a reusable custom React hook named useFetch to simplify API data fetching.
+The hook internally uses:
+        -> useState for state management
+        -> useEffect for side effects
+        -> useCallback for optimized reusability
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ 
+ -> A public API is used to fetch product data, which is displayed using a simple React component.
+ -> This approach improves code reusability, clean architecture, and separation of concerns.
 
-Currently, two official plugins are available:
+ ================================================================================================
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ In this project, I use following tech stack-
+   1. React
+   2. Custom Hooks
+   3. Netlify (Deployment)
+   4. GitHub (Version Control)
+   5. fake product API
+ =================================================================================================
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Netlify link:- 
+   https://6982b1020a8b695f9eea66e7--monumental-elf-2bfbd5.netlify.app/
